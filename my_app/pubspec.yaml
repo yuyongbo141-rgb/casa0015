@@ -1,0 +1,41 @@
+name: focus_shield
+description: "FocusShield – a Connected Environment study-quality app for CASA mobile assessment."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.7
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # State management
+  provider: ^6.1.2
+
+  # Sensor data (accelerometer, gyroscope, barometer)
+  sensors_plus: ^4.0.2
+
+  # Runtime permission requests (microphone, sensors)
+  permission_handler: ^11.3.1
+
+  # Local persistence – session history stored as JSON
+  shared_preferences: ^2.3.3
+
+  # Charts and data visualisations
+  fl_chart: ^0.69.0
+
+  # HTTP – weather API and optional external services
+  http: ^1.2.2
+
+  # Date / number formatting
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
