@@ -150,6 +150,7 @@ The app also includes a deterministic mock fallback so the full experience remai
 ```bash
 flutter pub get
 flutter run
+```
 
 ### Demo Mode
 
