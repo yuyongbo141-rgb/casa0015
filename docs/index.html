@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FocusShield</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #121a2f;
+      --text: #eef3ff;
+      --muted: #aab6d3;
+      --accent: #6f7cff;
+      --accent2: #22d3ee;
+      --border: rgba(255,255,255,0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #0b1020 0%, #11182b 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container {
+      width: min(1100px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .hero { padding: 72px 0 48px; }
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--accent2);
+      background: rgba(34, 211, 238, 0.08);
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-size: clamp(32px, 5vw, 58px);
+      line-height: 1.1;
+      margin: 0 0 16px;
+    }
+    .lead {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 18px;
+      margin-bottom: 28px;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      border: 1px solid var(--border);
+    }
+    .btn.primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: white;
+      border: none;
+    }
+    .btn.secondary {
+      color: var(--text);
+      background: rgba(255,255,255,0.04);
+    }
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .grid-2 {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .section { padding: 18px 0 36px; }
+    .card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 28px;
+    }
+    h3 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+    p, li { color: var(--muted); }
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+    .shots img {
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      display: block;
+      background: #0f1527;
+    }
+    .footer {
+      padding: 36px 0 60px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .small {
+      font-size: 14px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container hero">
+    <div class="badge">CASA0015 · Connected Environment</div>
+    <h1>FocusShield</h1>
+    <p class="lead">
+      A Flutter mobile application that helps students understand how noise, light,
+      movement, and environmental context affect study concentration.
+    </p>
+
+    <div class="actions">
+      <a class="btn primary" href="../demo/CASA0015%20Vedio.mp4">Watch Demo Video</a>
+      <a class="btn secondary" href="https://github.com/yuyongbo141-rgb/casa0015">View GitHub Repository</a>
+    </div>
+
+    <div class="card">
+      <strong>Problem:</strong>
+      Students often know how long they study, but not how their environment affects focus.
+      FocusShield turns environmental signals into a focus score, historical analytics,
+      and personalised recommendations.
+    </div>
+  </div>
+
+  <div class="container section">
+    <h2>Key Features</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Real-time Monitoring</h3>
+        <p>Uses the phone accelerometer to detect movement and combines it with environmental indicators during study sessions.</p>
+      </div>
+      <div class="card">
+        <h3>Focus Scoring</h3>
+        <p>Generates a composite focus score based on noise, movement, light, and session duration.</p>
+      </div>
+      <div class="card">
+        <h3>History & Recommendations</h3>
+        <p>Stores sessions over time and turns them into trend views, environment comparisons, and actionable advice.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container section">
+    <h2>How It Works</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>User Journey</h3>
+        <ul>
+          <li>Splash and onboarding introduce the app and permissions</li>
+          <li>Dashboard summarises recent performance and trends</li>
+          <li>Start Session and Live Session monitor study conditions</li>
+          <li>End Report explains the final focus score</li>
+          <li>History, comparison, and recommendations support repeated use</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Technology</h3>
+        <ul>
+          <li>Flutter mobile application</li>
+          <li>Accelerometer via <code>sensors_plus</code></li>
+          <li>Local persistence via <code>SharedPreferences</code></li>
+          <li>Charts via <code>fl_chart</code></li>
+          <li>Weather context via OpenWeatherMap API</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container section shots">
+    <h2>App Screens</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <img src="../screenshots/01_splash.png" alt="Splash screen" />
+        <p class="small">Splash</p>
+      </div>
+      <div class="card">
+        <img src="../screenshots/03_dashboard.png" alt="Dashboard screen" />
+        <p class="small">Dashboard</p>
+      </div>
+      <div class="card">
+        <img src="../screenshots/05_live_session.png" alt="Live session screen" />
+        <p class="small">Live Session</p>
+      </div>
+      <div class="card">
+        <img src="../screenshots/06_end_report.png" alt="End report screen" />
+        <p class="small">End Report</p>
+      </div>
+      <div class="card">
+        <img src="../screenshots/07_history_analytics.png" alt="History analytics screen" />
+        <p class="small">History Analytics</p>
+      </div>
+      <div class="card">
+        <img src="../screenshots/09_recommendations.png" alt="Recommendations screen" />
+        <p class="small">Recommendations</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer">
+    FocusShield · CASA0015 Mobile Systems & Interactions
+  </div>
+</body>
+</html>
