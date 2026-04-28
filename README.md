@@ -104,6 +104,7 @@ lib/
 │   ├── session_card.dart
 │   └── focus_chart.dart
 └── screens/
+```
 
 ---
 
